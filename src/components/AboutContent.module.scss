@@ -1,0 +1,147 @@
+@import "../styles/base.scss";
+@import "../styles/mixins.scss";
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1284px;
+    background-color: $bg-color;
+    border-radius: 20px;
+    position: relative;
+
+    &__title {
+        padding: 130px 0 65px 0;
+        color: #FFF;
+        text-align: center;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+
+        @include tablet-min {
+            max-width: 280px;
+            padding: 135px 0 50px 0;
+            font-size: 42px;
+        }
+
+        @include phone {
+            max-width: 180px;
+            font-size: 23px;
+            padding: 40px 0 30px 0;
+        }
+    }
+}
+
+.aboutContent__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 130px;
+    max-width: 650px;
+
+    @include phone {
+        padding: 0 30px 102px 30px;
+    }
+}
+
+
+.aboutContent__decorBgLeft {
+    position: absolute;
+    bottom: -120px;
+    left: -150px;
+
+    @include tablet {
+        max-width: 440px;
+        bottom: -70px;
+    }
+
+    @include phone {
+        display: none;
+    }
+}
+
+.aboutContent__decorBgRight {
+    position: absolute;
+    top: -250px;
+    right: -260px;
+
+    @media (max-width: 1700px) {
+        right: -100px;
+    }
+
+    @media (max-width: 1500px) {
+        max-width: 350px;
+        top: -30px;
+        right: -30px;
+    }
+
+    @include desktop {
+        right: 0px;
+        max-width: 300px;
+    }
+}
+
+.aboutContent__decorCircleBlue {
+    position: absolute;
+    top: 105px;
+    left: 165px;
+
+    @include desktop {
+        left: 90px;
+    }
+
+    @include tablet {
+        max-width: 60px;
+        left: 60px;
+        top: 60px;
+    }
+
+    @include tablet-min {
+        left: 45px;
+        top: 60px;
+    }
+
+    @include phone {
+        left: 20px;
+        top: 103px;
+        max-width: 20px;
+    }
+}
+
+.aboutContent__decorCirclePurpleTop {
+    position: absolute;
+    top: -75px;
+    right: 95px;
+
+    @include tablet-min {
+        max-width: 100px;
+        top: -50px;
+    }
+
+    @include phone {
+        max-width: 87px;
+        top: -50px;
+        right: -40px;
+    }
+}
+
+.aboutContent__decorCirclePurpleBottom {
+    position: absolute;
+    bottom: 107px;
+    right: 144px;
+
+    @include desktop {
+        bottom: 25px;
+        right: 400px;
+    }
+
+    @include phone {
+        bottom: 0;
+        right: 0;
+        max-width: 62px;
+    }
+
+}

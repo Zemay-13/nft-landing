@@ -1,0 +1,143 @@
+@import"../styles/base.scss";
+@import"../styles/mixins.scss";
+
+
+
+.header {
+    margin: 30px 0 218px 0;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+        margin: 30px 0 150px 0;
+    }
+
+    @include tablet-min {
+        margin: 30px 0 48px 0;
+    }
+
+    &__logo {
+        max-width: 128px;
+        max-height: 55px;
+
+        @include tablet {
+            max-width: 100px
+        }
+
+        @include tablet-min {
+            max-width: 140px;
+        }
+
+        @include phone {
+            width: 89px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container__nav {
+    display: flex;
+    gap: 105px;
+
+    @include tablet {
+        gap: 30px;
+
+        a {
+            font-size: 18px;
+        }
+    }
+
+    @include tablet-min {
+        display: none;
+    }
+
+
+    a {
+        color: $text-lightgray;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+    }
+
+}
+
+.container__button {
+    margin-left: 150px;
+    border-radius: 15px;
+    border: 1px solid #FFF;
+    padding: 16px 22px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #C3F33B;
+        border: 1px solid #C3F33B;
+    }
+
+    &:active {
+        color: #C3F33B;
+        border: 1px solid #C3F33B;
+        background: rgba(224, 255, 172, 0.05);
+        backdrop-filter: blur(7.5px);
+    }
+
+    &:disabled {}
+
+    @include tablet {
+        margin-left: 30px;
+    }
+
+    @include tablet-min {
+        display: none;
+    }
+
+}
+
+.header__burger {
+    display: none;
+    color: white;
+
+    .burger__menu {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 13px;
+        background-color: #FBF7FE;
+        border-radius: 10px;
+
+        @include phone {
+            max-width: 40px;
+            margin-bottom: 10px;
+
+        }
+
+    }
+
+    .burger__close {
+        width: 60px;
+
+        @include phone {
+            max-width: 40px;
+            max-height: 10px;
+        }
+    }
+
+    @include tablet-min {
+        display: flex;
+    }
+
+
+}
