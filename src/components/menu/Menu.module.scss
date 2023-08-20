@@ -41,6 +41,7 @@
     .menu__close {
         width: 40px;
         color: white;
+        cursor: pointer;
     }
 }
 
@@ -72,6 +73,7 @@
     font-weight: 500;
     line-height: normal;
     transition: 0.3s ease;
+    cursor: pointer;
 
     &:hover {
         color: #C3F33B;
@@ -85,6 +87,6 @@
         backdrop-filter: blur(7.5px);
     }
 
-    &:disabled {}
+
 
 }

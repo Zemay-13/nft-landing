@@ -48,6 +48,7 @@
     }
 
     &__close {
+        cursor: pointer;
         position: absolute;
         top: 30px;
         right: 40px;
@@ -156,6 +157,7 @@
     }
 
     .form__submit {
+        cursor: pointer;
         width: 100%;
         color: #242424;
         text-align: center;
