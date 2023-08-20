@@ -1,9 +1,10 @@
 import manCircleImg from "../assets/image/manCircle.svg";
 import manImgMobile from "../assets/image/manMobile.svg";
 import FormCard from "./formCard/FormCard";
-
+import { useState } from "react";
 import styles from "./HomeContent.module.scss";
-const HomeContent = ({ openForm, setOpenForm }) => {
+const HomeContent = () => {
+  const [openForm, setOpenForm] = useState(false);
   return (
     <>
       <div className={styles.hс}>
@@ -20,13 +21,16 @@ const HomeContent = ({ openForm, setOpenForm }) => {
             Получи все нужные навыки для заработка на NFT всего за 28 дней!
           </h2>
 
-          <button className={styles.containerContent__button}>
+          <button
+            onClick={() => setOpenForm(true)}
+            className={styles.containerContent__button}
+          >
             Начать зарабатывать на NFT
           </button>
         </div>
         <img src={manCircleImg} alt="man" className={styles.hc__img} />
       </div>
-      {openForm && <FormCard setOpenForm={setOpenForm} openForm={openForm} />}
+      {openForm && <FormCard onClose={() => setOpenForm(false)} />}
     </>
   );
 };

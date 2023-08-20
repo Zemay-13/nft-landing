@@ -4,7 +4,8 @@ import { HiOutlineX } from "react-icons/hi";
 import { useState } from "react";
 
 import styles from "./Header.module.scss";
-const Header = ({ openMenu, setOpenMenu }) => {
+const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className={styles.header}>
       <img src={logo} alt="logo" className={styles.header__logo} />
@@ -15,7 +16,7 @@ const Header = ({ openMenu, setOpenMenu }) => {
         </nav>
         <button className={styles.container__button}>Личный кабинет</button>
         <div
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => setOpenMenu(true)}
           className={styles.header__burger}
         >
           {openMenu ? (
@@ -27,7 +28,7 @@ const Header = ({ openMenu, setOpenMenu }) => {
             </div>
           )}
         </div>
-        {openMenu && <Menu setOpen={setOpenMenu} />}
+        {openMenu && <Menu onClose={() => setOpenMenu(false)} />}
       </div>
     </header>
   );
