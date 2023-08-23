@@ -24,10 +24,7 @@ const AboutContent = () => {
           cardImg={linguaSmile}
           cardText="Поймёшь, как выбирать правильные дропы"
         />
-        <AboutCard
-          cardImg={dollarSmile}
-          cardText="Построишь план по быстрому приумножению заработанных средств"
-        />
+
         <AboutCard
           cardImg={glassesSmile}
           cardText="Узнаешь кто такие холдеры и флипперы"

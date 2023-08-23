@@ -1,5 +1,4 @@
-import manCircleImg from "../assets/image/manCircle.svg";
-import manImgMobile from "../assets/image/manMobile.svg";
+import homeImg from "../assets/image//home-my-photo.png";
 import FormCard from "./formCard/FormCard";
 import { useState } from "react";
 import styles from "./HomeContent.module.scss";
@@ -10,25 +9,26 @@ const HomeContent = () => {
       <div className={styles.hс}>
         <div className={styles.hc__containerContent}>
           <h1 className={styles.containerContent__title}>
-            Не упусти возможность войти в <span>прибыльную нишу</span> 
+            Добро пожаловать и <span>давайте знакомиться!</span> 
           </h1>
           <img
-            src={manImgMobile}
-            alt="man"
+            src={homeImg}
+            alt="photo"
             className={styles.containerContent__imgMobile}
           />
           <h2 className={styles.containerContent__subtitle}>
-            Получи все нужные навыки для заработка на NFT всего за 28 дней!
+            Меня зовут Анастасия Патутина, я frontend-разработчик и кандидат в
+            Яндекс Практикум!
           </h2>
 
           <button
             onClick={() => setOpenForm(true)}
             className={styles.containerContent__button}
           >
-            Начать зарабатывать на NFT
+            Ссылка на репозиторий приложения
           </button>
         </div>
-        <img src={manCircleImg} alt="man" className={styles.hc__img} />
+        <img src={homeImg} alt="man" className={styles.hc__img} />
       </div>
       {openForm && <FormCard onClose={() => setOpenForm(false)} />}
     </>

@@ -15,18 +15,13 @@
 
 .hc__img {
     position: absolute;
-    top: -100px;
-    right: -30px;
-    width: 850px;
-
-    @media (max-width: 1286px) {
-        width: 750px;
-    }
+    bottom: 0;
+    right: 0;
+    width: 600px;
 
     @include desktop {
         max-width: 550px;
-        top: 140px;
-        right: 30px;
+
     }
 
     @include tablet {
@@ -130,11 +125,18 @@
 
     .containerContent__imgMobile {
         display: none;
+        margin-bottom: 20px;
 
         @include tablet {
             display: block;
-            max-width: 800px;
+            max-width: 400px;
         }
+
+        @include tablet-min {
+            display: block;
+            max-width: 300px;
+        }
+
 
         @include phone {
             max-width: 310px;

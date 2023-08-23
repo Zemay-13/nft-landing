@@ -9,18 +9,10 @@ const FormCard = ({ onClose }) => {
       <div className={styles.fc}>
         <HiOutlineX className={styles.fc__close} onClick={onClose} />
         <div className={styles.fc__content}>
-          <h1 className={styles.content__title}>Начни прямо сейчас!</h1>
           <p className={styles.content__text}>
-            Получи все нужные навыки для заработка на NFT всего за 28 дней!
+            Исходники приложения доступны в публичном репозитории на Github:
           </p>
-          <form className={styles.content__form}>
-            <input
-              type="text"
-              className={styles.form__input}
-              placeholder="Ваш email"
-            />
-            <button className={styles.form__submit}>Оплатить</button>
-          </form>
+          <p></p>
         </div>
         <img src={decorBg} alt="" className={styles.fc__decorBg} />
       </div>

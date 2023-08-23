@@ -4,7 +4,7 @@
 
 
 .header {
-    margin: 30px 0 218px 0;
+    margin: 30px 0 100px 0;
     max-width: 1280px;
     width: 100%;
     display: flex;
@@ -20,20 +20,35 @@
     }
 
     &__logo {
-        max-width: 128px;
-        max-height: 55px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-        @include tablet {
-            max-width: 100px
+        img {
+            max-width: 128px;
+            max-height: 55px;
+
+            @include tablet {
+                max-width: 100px
+            }
+
+            @include tablet-min {
+                max-width: 140px;
+            }
+
+            @include phone {
+                width: 89px;
+            }
         }
 
-        @include tablet-min {
-            max-width: 140px;
+        h1 {
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 24px;
         }
 
-        @include phone {
-            width: 89px;
-        }
+
     }
 
     &__container {
@@ -66,45 +81,17 @@
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: #C3F33B;
+        }
 
     }
 
 }
 
-.container__button {
-    margin-left: 150px;
-    border-radius: 15px;
-    border: 1px solid #FFF;
-    padding: 16px 22px;
-    color: #FFF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    transition: 0.3s ease;
 
-    &:hover {
-        color: #C3F33B;
-        border: 1px solid #C3F33B;
-    }
-
-    &:active {
-        color: #C3F33B;
-        border: 1px solid #C3F33B;
-        background: rgba(224, 255, 172, 0.05);
-        backdrop-filter: blur(7.5px);
-    }
-
-
-    @include tablet {
-        margin-left: 30px;
-    }
-
-    @include tablet-min {
-        display: none;
-    }
-
-}
 
 .header__burger {
     display: none;
