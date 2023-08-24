@@ -1,6 +1,5 @@
 import AboutCard from "./aboutCard/AboutCard";
 import starSmile from "../assets/image/starSmile.svg";
-import dollarSmile from "../assets/image/dollarSmile.svg";
 import linguaSmile from "../assets/image/linguaSmile.svg";
 import glassesSmile from "../assets/image/glassesSmile.svg";
 import decorBg from "../assets/image/decorBgAbout.svg";
@@ -14,20 +13,20 @@ const AboutContent = () => {
   return (
     <div className={styles.aboutContent}>
       <img src={decorBg} className={styles.aboutContent__decorBgRight} />
-      <h1 className={styles.aboutContent__title}>Что даст тебе обучение?</h1>
+      <h1 className={styles.aboutContent__title}>Ответы на вопросы</h1>
       <div className={styles.aboutContent__cards}>
         <AboutCard
           cardImg={starSmile}
-          cardText="Откроешь свой первый криптокошелек и научишься с ним работать"
+          cardText="Как я изменилась после школы? Сравним фотографии"
         />
         <AboutCard
           cardImg={linguaSmile}
-          cardText="Поймёшь, как выбирать правильные дропы"
+          cardText="Почему программирование стало для меня любимым делом?"
         />
 
         <AboutCard
           cardImg={glassesSmile}
-          cardText="Узнаешь кто такие холдеры и флипперы"
+          cardText="Фишка CSS при работе с текстом или тайна text-overflow"
         />
       </div>
       <img src={decorBg} className={styles.aboutContent__decorBgLeft} />

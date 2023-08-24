@@ -1,0 +1,111 @@
+@import "../../styles/mixins.scss";
+
+.bg {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+.fc {
+    margin: 0 15px 0 15px;
+    position: relative;
+    padding: 0 128px 0 70px;
+    border-radius: 30px;
+    max-width: 670px;
+    background-image: url("../../assets/image/bg-form-color.svg");
+
+    @include tablet {
+        padding: 0 60px 0 30px;
+    }
+
+    @include tablet-min {
+        padding: 0 40px 0 20px;
+    }
+
+    @include phone {
+        max-width: 320px;
+        top: 0;
+        left: 0;
+    }
+
+    &__decorBg {
+        max-width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 30px 30px 30px;
+
+        @include tablet-min {
+            max-width: 300px;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: white;
+        width: 45px;
+        z-index: 12;
+
+        @include tablet {
+            top: 10px;
+            width: 40px;
+            right: 30px;
+        }
+
+        @include tablet-min {
+            top: 10px;
+            width: 30px;
+            right: 20px;
+        }
+
+        @include phone {
+            top: 16px;
+            width: 34px;
+            right: 16px;
+        }
+    }
+}
+
+.fc__content {
+    max-width: 455px;
+
+    .content__text {
+        padding: 56px 0 35px 0;
+        color: #FFF;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+        @include tablet {
+            font-size: 20px;
+            padding-bottom: 25px;
+        }
+
+        @include tablet-min {
+            font-size: 16px;
+            padding-bottom: 16px;
+        }
+
+        @include phone {
+            font-size: 18px;
+            padding-bottom: 25px;
+        }
+    }
+
+    .content__Link {
+        padding: 8px 8px;
+        background-color: #FFF;
+        margin-bottom: 30px;
+    }
+}

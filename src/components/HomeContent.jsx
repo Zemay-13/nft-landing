@@ -1,5 +1,5 @@
 import homeImg from "../assets/image//home-my-photo.png";
-import FormCard from "./formCard/FormCard";
+import LinkCard from "./linkCard/LinkCard";
 import { useState } from "react";
 import styles from "./HomeContent.module.scss";
 const HomeContent = () => {
@@ -9,7 +9,7 @@ const HomeContent = () => {
       <div className={styles.hс}>
         <div className={styles.hc__containerContent}>
           <h1 className={styles.containerContent__title}>
-            Добро пожаловать и <span>давайте знакомиться!</span> 
+            Добро пожаловать<span> и давайте знакомиться!</span> 
           </h1>
           <img
             src={homeImg}
@@ -30,7 +30,7 @@ const HomeContent = () => {
         </div>
         <img src={homeImg} alt="man" className={styles.hc__img} />
       </div>
-      {openForm && <FormCard onClose={() => setOpenForm(false)} />}
+      {openForm && <LinkCard onClose={() => setOpenForm(false)} />}
     </>
   );
 };

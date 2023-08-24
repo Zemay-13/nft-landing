@@ -55,6 +55,7 @@
 
     .containerContent__title {
         padding-bottom: 20px;
+        max-width: 650px;
         color: #FFF;
         font-size: 72px;
         font-style: normal;
@@ -78,6 +79,7 @@
             line-height: 105%;
             letter-spacing: -0.75px;
             padding-bottom: 30px;
+
         }
 
         @include tablet-min {
